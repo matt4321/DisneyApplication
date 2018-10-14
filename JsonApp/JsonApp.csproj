@@ -56,27 +56,27 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <ApplicationDefinition Include="Configs\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="UI\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
+    <Compile Include="Configs\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Disney.cs" />
-    <Compile Include="DisneyForm.cs">
+    <Compile Include="Classes\Disney.cs" />
+    <Compile Include="UI\DisneyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DisneyForm.Designer.cs">
+    <Compile Include="UI\DisneyForm.Designer.cs">
       <DependentUpon>DisneyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GetTheData.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Classes\GetTheData.cs" />
+    <Compile Include="UI\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -95,7 +95,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="DisneyForm.resx">
+    <EmbeddedResource Include="UI\DisneyForm.resx">
       <DependentUpon>DisneyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -103,14 +103,14 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="disney.json" />
-    <None Include="packages.config" />
+    <None Include="Configs\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Configs\App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

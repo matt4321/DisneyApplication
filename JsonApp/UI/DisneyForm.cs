@@ -24,6 +24,7 @@ namespace JsonApp
 
         private void ascBtn_Click(object sender, EventArgs e)
         {
+            YearView.Items.Clear();
             var ascList = disneyData.OrderBy(x => x.yr).ToList();
             foreach (var item in ascList)
             {
@@ -34,6 +35,7 @@ namespace JsonApp
 
         private void descBtn_Click(object sender, EventArgs e)
         {
+            YearView.Items.Clear();
             var ascList = disneyData.OrderByDescending(x => x.yr).ToList();
             foreach (var item in ascList)
             {

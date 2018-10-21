@@ -12,6 +12,7 @@ namespace JsonApp
         public List<Disney> QueryResults(List<Disney> disneyData, List<RadioButton> checkedRadio)
         {
             var checkedTitle = checkedRadio.Select(x => x.Text).First();
+            disneyData = disneyData.Where(x => x.)
             return disneyData;
         }
     }

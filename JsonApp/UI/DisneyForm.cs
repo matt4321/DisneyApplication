@@ -49,7 +49,13 @@ namespace JsonApp
             var radioCollection = groupOptions.Controls.OfType<RadioButton>();
             var checkedRadio = radioCollection.Where(x => x.Checked == true).ToList();
             var searchData = new SearchFunctions();
-            var searchResults = searchData.QueryResults(disneyData, checkedRadio);
+            var textData = searchInfo.Text;
+            var searchResults = searchData.QueryResults(disneyData, checkedRadio, textData);
+            foreach (var item in searchResults)
+            {
+                var fullDetails = string.Format($"{item.yr}: {item.mv}, {item.rt}, {item.len}");
+                searchResultsList.Items.Add(fullDetails);
+            }
         }
     }
 }

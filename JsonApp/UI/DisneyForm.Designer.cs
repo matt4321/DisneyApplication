@@ -37,10 +37,11 @@
             this.radioLength = new System.Windows.Forms.RadioButton();
             this.radioRating = new System.Windows.Forms.RadioButton();
             this.radioTitle = new System.Windows.Forms.RadioButton();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.searchInfo = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
-            this.listViewSearch = new System.Windows.Forms.ListView();
+            this.searchResultsList = new System.Windows.Forms.ListView();
             this.groupOptions = new System.Windows.Forms.GroupBox();
+            this.resultsFromSearch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupOptions.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,12 +128,12 @@
             this.radioTitle.Text = "Title";
             this.radioTitle.UseVisualStyleBackColor = true;
             // 
-            // textBoxSearch
+            // searchInfo
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(326, 31);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(192, 20);
-            this.textBoxSearch.TabIndex = 7;
+            this.searchInfo.Location = new System.Drawing.Point(326, 31);
+            this.searchInfo.Name = "searchInfo";
+            this.searchInfo.Size = new System.Drawing.Size(192, 20);
+            this.searchInfo.TabIndex = 7;
             // 
             // Search
             // 
@@ -144,13 +145,16 @@
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
-            // listViewSearch
+            // searchResultsList
             // 
-            this.listViewSearch.Location = new System.Drawing.Point(326, 99);
-            this.listViewSearch.Name = "listViewSearch";
-            this.listViewSearch.Size = new System.Drawing.Size(434, 183);
-            this.listViewSearch.TabIndex = 9;
-            this.listViewSearch.UseCompatibleStateImageBehavior = false;
+            this.searchResultsList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.resultsFromSearch});
+            this.searchResultsList.Location = new System.Drawing.Point(326, 99);
+            this.searchResultsList.Name = "searchResultsList";
+            this.searchResultsList.Size = new System.Drawing.Size(434, 183);
+            this.searchResultsList.TabIndex = 9;
+            this.searchResultsList.UseCompatibleStateImageBehavior = false;
+            this.searchResultsList.View = System.Windows.Forms.View.Details;
             // 
             // groupOptions
             // 
@@ -165,15 +169,20 @@
             this.groupOptions.TabStop = false;
             this.groupOptions.Text = "Options";
             // 
+            // resultsFromSearch
+            // 
+            this.resultsFromSearch.Text = "Search Results";
+            this.resultsFromSearch.Width = 430;
+            // 
             // DisneyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupOptions);
-            this.Controls.Add(this.listViewSearch);
+            this.Controls.Add(this.searchResultsList);
             this.Controls.Add(this.Search);
-            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.searchInfo);
             this.Controls.Add(this.YearView);
             this.Controls.Add(this.descBtn);
             this.Controls.Add(this.ascBtn);
@@ -196,9 +205,10 @@
         private System.Windows.Forms.RadioButton radioLength;
         private System.Windows.Forms.RadioButton radioRating;
         private System.Windows.Forms.RadioButton radioTitle;
-        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button Search;
-        private System.Windows.Forms.ListView listViewSearch;
+        private System.Windows.Forms.ListView searchResultsList;
         private System.Windows.Forms.GroupBox groupOptions;
+        public System.Windows.Forms.TextBox searchInfo;
+        private System.Windows.Forms.ColumnHeader resultsFromSearch;
     }
 }

@@ -8,9 +8,7 @@ namespace JsonApp
 {
     public class ConverstionClass
     {
-        public string Year = "yr";
-        public string Movie = "mv";
-        public string Length = "len";
-        public string Rating = "rt";
+        public string input { get; set; }
+        public string output { get; set; }
     }
 }

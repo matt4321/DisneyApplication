@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JsonApp
 {
-    class ConverstionClass
+    public class ConverstionClass
     {
         public string Year = "yr";
         public string Movie = "mv";

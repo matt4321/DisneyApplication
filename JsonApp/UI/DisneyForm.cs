@@ -30,7 +30,7 @@ namespace JsonApp
             {
                 var fullDetails = string.Format($"{item.yr}: {item.mv}, {item.rt}, {item.len}");
                 YearView.Items.Add(fullDetails);
-            } 
+            }
         }
 
         private void descBtn_Click(object sender, EventArgs e)
@@ -42,6 +42,14 @@ namespace JsonApp
                 var fullDetails = string.Format($"{item.yr}: {item.mv}, {item.rt}, {item.len}");
                 YearView.Items.Add(fullDetails);
             }
+        }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            var radioCollection = groupOptions.Controls.OfType<RadioButton>();
+            var checkedRadio = radioCollection.Where(x => x.Checked == true).ToList();
+            var searchData = new SearchFunctions();
+            var searchResults = searchData.QueryResults(disneyData, checkedRadio);
         }
     }
 }

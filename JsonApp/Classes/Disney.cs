@@ -12,5 +12,6 @@ namespace JsonApp
         public int yr { get; set; }
         public string rt { get; set; }
         public int len { get; set; }
+        public string variableName { get; set; }
     }
 }
